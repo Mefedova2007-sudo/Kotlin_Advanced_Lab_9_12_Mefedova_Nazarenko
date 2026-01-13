@@ -9,4 +9,25 @@ fun main() {
     println(age)
     age = - 345
     println(age)
+    val sword = Item( 1 ,  "Sword",  1)
+    val betterSword = sword.copy(quantity = 2)
+    println(sword.toString())
+    println(betterSword.toString())
+    val(id, name, quantity) = betterSword
+    println("Id предмета: $id\nимя: $name\nКоличество: $quantity\n")
 }
+data class Item(
+        val id: Int,
+        val name: String,
+        val quantity: Int
+    ) {
+    override fun toString(): String {
+        return "Id предмета: $id\nимя: $name\nКоличество: $quantity\n"
+    }
+
+}
+
+
+
+
+
